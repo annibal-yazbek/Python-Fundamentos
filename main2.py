@@ -1,3 +1,5 @@
+# importando modulos.
+
 from sys import path
 
 path.append('C:\\Users\\yaz\\OneDrive\\Documentos\\An\\Treinamentos\\Python+Docker\\Fundamentos')
