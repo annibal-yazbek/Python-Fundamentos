@@ -39,7 +39,7 @@ class carroEletrico(Carro):
 meuCarro = Carro("Ford", "Fusion", 2021)
 meuCarroEletrico = carroEletrico("Tesla", "Model S", 2022)
 print(meuCarroEletrico.geraNomeCarro())
-print(meuCarroEletrico.descricaoBateria())
+meuCarroEletrico.descricaoBateria()
 
 
 
