@@ -28,13 +28,18 @@ class Carro:
 class carroEletrico(Carro):
     def __init__(self, marca, modelo, ano):
         super().__init__(marca, modelo, ano)
-        
+        self.ah = 75
+
+    def descricaoBateria(self):
+        print(f"Este carro tem {self.ah} Ah de bateria.")
+
 
     
 
 meuCarro = Carro("Ford", "Fusion", 2021)
 meuCarroEletrico = carroEletrico("Tesla", "Model S", 2022)
 print(meuCarroEletrico.geraNomeCarro())
+print(meuCarroEletrico.descricaoBateria())
 
 
 
