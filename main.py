@@ -7,11 +7,14 @@ with open('arquivoPessoas.txt', 'r') as f:
     f.close()
         
 with open("arquivoPessoas.txt", "r") as meuArquivo:
-    conteudo = meuArquivo.readlines()
-    print(conteudo)  # Imprime o conteúdo do arquivo como uma lista de strings
-    # Ler o arquivo linha por linha
+    conteudo1 = meuArquivo.readlines()
+    print(conteudo1)
     
-    conteudo = meuArquivo.readline()
-    print(conteudo)  # Imprime a primeira linha do arquivo
+    for linha in conteudo1:
+        print(linha, end = '')
+        
+
+    conteudo2 = meuArquivo.readline()
+    print(conteudo2)  # Imprime a primeira linha do arquivo
 
 
