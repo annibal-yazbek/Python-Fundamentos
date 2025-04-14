@@ -1,13 +1,32 @@
-# carregando arquivos JSON
+# convertendo JSON para objetos python
 import json
-meuArquivo = 'pessoas.json'
-with open(meuArquivo, 'r', encoding = 'utf-8', newline = '') as f:
-     pessoas = json.load(f)
-     print (pessoas)
 
-     for p in pessoas:
-         print(type(p))
+minhaStringJson = """
+{
+	"gerentes": [
+	{
+		"id":"001",
+		"cidade": "São Paulo",
+		"salario": "10.000"
+	},
+	{
+		"id":"002",
+		"cidade": "Rio de Janeiro",
+		"salario": "7.000"
+	}
+	],
+	"funcionario": [
+	{
+		"id": "999",
+		"cidade": "Ribeirão",
+		"cargo": "Empacotador",
+		"salario": "3.000"
+	}
+	]
+}
+"""
 
-     for p in pessoas:
-         print(p['nome'], p['altura'])
+meuObjetoPython = json.loads(minhaStringJson)
+print(meuObjetoPython['gerentes'][0]['salario'])
+      
 
