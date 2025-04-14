@@ -1,10 +1,13 @@
-# Trabalhando com enumerate
-with open('frasesFamosas.txt', 'r') as f:
-    for linhas in enumerate(f.readlines()):
-        if linhas[0] % 2 == 0:
-            print(linhas[1], end = '')
-        else:
-            print(' ' + linhas[1])
+# carregando arquivos JSON
+import json
+meuArquivo = 'pessoas.json'
+with open(meuArquivo, 'r', encoding = 'utf-8', newline = '') as f:
+     pessoas = json.load(f)
+     print (pessoas)
 
+     for p in pessoas:
+         print(type(p))
 
-    
+     for p in pessoas:
+         print(p['nome'], p['altura'])
+
