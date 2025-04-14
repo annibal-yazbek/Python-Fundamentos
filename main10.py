@@ -1,9 +1,7 @@
-# escrevendo arquivo JSON
-
+# Convertendo objetos Python para JSON
 import json
 
-minhaStringJson = """
-{
+meuObjetoPython = {
 	"gerentes": [
 	{
 		"id":"001",
@@ -25,7 +23,7 @@ minhaStringJson = """
 	}
 	]
 }
-"""
 
-with open('meuArquivoJson.json', 'w') as f:
-    json.dump(minhaStringJson, f)
+meuObjetoJson = json.dumps(meuObjetoPython)
+print(meuObjetoJson)
+
