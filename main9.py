@@ -1,7 +1,8 @@
-# Convertendo objetos Python para JSON
+# convertendo JSON para objetos python
 import json
 
-meuObjetoPython = {
+minhaStringJson = """
+{
 	"gerentes": [
 	{
 		"id":"001",
@@ -23,7 +24,9 @@ meuObjetoPython = {
 	}
 	]
 }
+"""
 
-meuObjetoJson = json.dumps(meuObjetoPython)
-print(meuObjetoJson)
+meuObjetoPython = json.loads(minhaStringJson)
+print(meuObjetoPython['gerentes'][0]['salario'])
+      
 
