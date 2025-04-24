@@ -1,9 +1,9 @@
-from urllib import request
+import requests
+from bs4 import BeautifulSoup
 
-minhaUrl = 'https://www.google.com/search?q=aprenda+python'
-minhaPagina = request.urlopen(minhaUrl)
+url = 'https://pt.wikipedia.org/wiki/Abraham_Lincoln'
+r = requests.get(url)
+conteudoHtml = r.text
+htmlSoup = BeautifulSoup(conteudoHtml, features="lxml")
+print(htmlSoup.find('h1'))
 
-status = minhaPagina.code
-
-print(type(minhaPagina))
-print(status)
