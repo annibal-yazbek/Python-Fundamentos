@@ -33,3 +33,4 @@ for table in ep_tables:
             
 for episode in episodes:
     print(episode)
+
